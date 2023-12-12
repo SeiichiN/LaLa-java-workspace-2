@@ -1,0 +1,5 @@
+
+StringクラスのindexOfメソッドは、仮引数としてchar型を渡しているのに
+何故int indexOf(char ch)ではなくint indexOf(int ch)と定義されているのですか？
+
+https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q11197001821
