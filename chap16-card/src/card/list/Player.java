@@ -1,6 +1,6 @@
-package game.set;
+package card.list;
 
-import java.util.Set;
+import java.util.List;
 
 public class Player {
 	String name;
@@ -10,23 +10,23 @@ public class Player {
 		this.name = name;
 	}
 	
-	public void draw(Set<Card> cardSet) {
+	public void draw(List<Card> cardList) {
 		Card card = null;
 		do {
 			int s = (int)(Math.random() * 4);
 			int num = (int)(Math.random() * 13) + 1;
 			card = new Card(Const.suits[s], num);
-		} while (cardSet.remove(card) == false);
+		} while (cardList.remove(card) == false);
 		this.card = card;
 	}
 	
-	public void drawHeart(Set<Card> cardSet) {
+	public void drawHeart(List<Card> cardList) {
 		Card card = null;
 		do {
 			int s = 0;
 			int num = (int)(Math.random() * 13) + 1;
 			card = new Card(Const.suits[s], num);
-		} while (cardSet.remove(card) == false);
+		} while (cardList.remove(card) == false);
 		this.card = card;
 	}
 

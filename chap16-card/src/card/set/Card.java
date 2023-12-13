@@ -1,4 +1,4 @@
-package game.set;
+package card.set;
 
 import java.util.Objects;
 
@@ -15,10 +15,10 @@ public class Card {
 		return suit + ":" + num;
 	}
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(num, suit);
-	}
+//	@Override
+//	public int hashCode() {
+//		return Objects.hash(num, suit);
+//	}
 
 	@Override
 	public boolean equals(Object obj) {

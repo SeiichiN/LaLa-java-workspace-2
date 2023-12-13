@@ -1,4 +1,4 @@
-package game.list;
+package card.list;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +12,11 @@ public class Main {
 //		printList(cardList);
 		System.out.println(cardList.size());
 		System.out.println("---------------------------");
+		int i = (int)(Math.random() * cardList.size());
+		Card iCard = cardList.remove(i);
+		System.out.println(iCard);
+		System.out.println(cardList.size());
+		
 		Card card = new Card("heart", 13);
 		cardList.remove(card);
 		System.out.println(cardList.size());
