@@ -1,4 +1,6 @@
-package game;
+package game.set;
+
+import java.util.Objects;
 
 public class Card {
 	private String suit;
@@ -20,7 +22,11 @@ public class Card {
 		return suit + ":" + number;
 	}
 	
-
+	@Override
+	public int hashCode() {
+		return Objects.hash(number, suit);
+	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -28,13 +34,7 @@ public class Card {
 		if (!(obj instanceof Card))
 			return false;
 		Card other = (Card) obj;
-		if (number != other.number)
-			return false;
-		if (suit == null) {
-			if (other.suit != null)
-				return false;
-		} else if (!suit.equals(other.suit))
-			return false;
-		return true;
+		return number == other.number && Objects.equals(suit, other.suit);
 	}
+	
 }
