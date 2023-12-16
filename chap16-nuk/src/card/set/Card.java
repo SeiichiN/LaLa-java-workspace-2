@@ -15,10 +15,12 @@ public class Card {
 		return suit + ":" + num;
 	}
 
-//	@Override
-//	public int hashCode() {
-//		return Objects.hash(num, suit);
-//	}
+	@Override
+	public int hashCode() {
+		int code = Objects.hash(num, suit);
+		System.out.println(suit + ":" + num + " > " + code);
+		return code;
+	}
 
 	@Override
 	public boolean equals(Object obj) {

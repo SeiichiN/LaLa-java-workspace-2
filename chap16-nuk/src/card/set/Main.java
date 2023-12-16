@@ -9,8 +9,9 @@ public class Main {
 		Set<Card> cardSet = new HashSet<>();
 		setup(cardSet);
 		Card card = new Card("heart", 13);
+		System.out.println("remove: heart 13 > " + card.hashCode());
 		cardSet.remove(card);
-		print(cardSet);
+//		print(cardSet);
 //		Player com = new Player("コム");
 //		Player user = new Player("ユーザー");
 //		com.draw(cardSet);
