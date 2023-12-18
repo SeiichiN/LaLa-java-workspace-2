@@ -7,11 +7,12 @@ public class Main {
 
 	public static void main(String[] args) {
 		Calendar c = Calendar.getInstance();
+		System.out.println(c.getTime());
 		Calendar cc = Calendar.getInstance();
 		if (c.equals(cc)) {
 			System.out.println("同じ");
 		} else {
-			System.out.print("違う");
+			System.out.println("違う");
 		}
 		
 		c.set(2019, 8, 22);   // 0 start
