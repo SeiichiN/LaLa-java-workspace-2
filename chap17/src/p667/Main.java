@@ -1,4 +1,4 @@
-package p655;
+package p667;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -8,12 +8,13 @@ public class Main {
 	public static void main(String[] args) {
 		try {
 			FileWriter fw = new FileWriter("data.txt");
-			fw.write("ハロハロハロー");
+			String str = null;
+			fw.write(str);
 			fw.close();
 		} catch (IOException e) {
-			System.out.println(e.getMessage());
-			e.printStackTrace();
-			System.out.println("エラーです。書き込めませんでした");
+			System.out.println("書き込めませんでした");
+		} catch (NullPointerException e) {
+			System.out.println("nullだよ");
 		}
 		System.out.println("処理が終わりです");
 	}
